@@ -1,4 +1,4 @@
-package com.example.g572_528r.as0518_news;
+package com.example.g572_528r.as0518_news.fragment;
 
 
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.g572_528r.as0518_news.R;
+import com.example.g572_528r.as0518_news.adapter.NewsAdapter;
+import com.example.g572_528r.as0518_news.data.NewsData;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -36,10 +39,10 @@ public class NewsFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private List<NewsData.ResultBean.NewsBean> mNewsList = new ArrayList<>();
     private NewsAdapter mNewsAdapter;
-    private final String URL1 = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495087308551&di=60454d56fd6c7143f97049f56f8c9ab9&imgtype=0&src=http%3A%2F%2Fpic.bxgdw.com%2Fpic%2F0%2F101%2F38%2F47%2F101384751_000000005176a0b9.jpg";
-    private final String URL2 = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495087354065&di=7181ca13f460f1690b69fd75d8d214a8&imgtype=0&src=http%3A%2F%2Fimg.tvmao.com%2Fstills%2Fstar%2F1%2F671%2Fb%2FK7OnW7CpLB.jpg";
-    private final String URL3 = "http://tupian.enterdesk.com/2012/0427/1096/17.jpg";
-    private final String URL4 = "http://guangdong.sinaimg.cn/2014/1121/U12144P693DT20141121142620.jpg";
+    private final String URL1 = "http://v.juhe.cn/toutiao/index?type=top&key=951120925db65e7801656e888efa6c4c";
+    private final String URL2 = "http://v.juhe.cn/toutiao/index?type=yule&key=951120925db65e7801656e888efa6c4c";
+    private final String URL3 = "http://v.juhe.cn/toutiao/index?type=tiyu&key=951120925db65e7801656e888efa6c4c";
+    private final String URL4 = "http://v.juhe.cn/toutiao/index?type=keji&key=951120925db65e7801656e888efa6c4c";
     private Handler mHandler;
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.g572_528r.as0518_news;
+package com.example.g572_528r.as0518_news.data;
 
 import java.util.List;
 

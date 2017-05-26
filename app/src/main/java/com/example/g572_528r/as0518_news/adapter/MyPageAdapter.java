@@ -1,8 +1,10 @@
-package com.example.g572_528r.as0518_news;
+package com.example.g572_528r.as0518_news.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.example.g572_528r.as0518_news.fragment.NewsFragment;
 
 import java.util.ArrayList;
 
@@ -41,6 +43,6 @@ public class MyPageAdapter extends FragmentPagerAdapter {
             return mTitleList.get(position);
         }
 
-        return "notitle";
+        return "noTitle";
     }
 }

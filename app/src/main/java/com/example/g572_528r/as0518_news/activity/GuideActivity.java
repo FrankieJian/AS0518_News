@@ -1,4 +1,4 @@
-package com.example.g572_528r.as0518_news;
+package com.example.g572_528r.as0518_news.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
+
+import com.example.g572_528r.as0518_news.R;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

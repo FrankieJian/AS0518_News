@@ -1,9 +1,13 @@
-package com.example.g572_528r.as0518_news;
+package com.example.g572_528r.as0518_news.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+
+import com.example.g572_528r.as0518_news.adapter.MyPageAdapter;
+import com.example.g572_528r.as0518_news.fragment.NewsFragment;
+import com.example.g572_528r.as0518_news.R;
 
 import java.util.ArrayList;
 
