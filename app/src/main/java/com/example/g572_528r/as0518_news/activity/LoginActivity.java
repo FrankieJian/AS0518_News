@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.g572_528r.as0518_news.R;
 
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtCode;
     private Button btnGetCode;
     private Button btnLog;
+    private String phone;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,15 +42,18 @@ public class LoginActivity extends AppCompatActivity {
         btnGetCode = (Button) findViewById(R.id.btn_getCode);
         btnLog = (Button) findViewById(R.id.btn_log);
 
-        final String phone = edtPhone.getText().toString();
+
 
         btnGetCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BmobSMS.requestSMSCode(phone, "bombTest", new QueryListener<Integer>() {
+                phone = edtPhone.getText().toString();
+                BmobSMS.requestSMSCode(phone, "LFJ0424", new QueryListener<Integer>() {
                     @Override
                     public void done(Integer integer, BmobException e) {
-
+                        if (e != null){
+                            Toast.makeText(LoginActivity.this, "success", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }

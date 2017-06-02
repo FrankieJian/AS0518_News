@@ -1,5 +1,6 @@
 package com.example.g572_528r.as0518_news.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import com.example.g572_528r.as0518_news.R;
 import com.example.g572_528r.as0518_news.data.CommentData;
 
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
@@ -54,6 +56,11 @@ public class ReadActivity extends AppCompatActivity {
         btnComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                BmobUser user = BmobUser.getCurrentUser();
+                if(user == null){
+                    startActivity(new Intent(ReadActivity.this, LoginActivity.class));
+                    return;
+                }
                 String phone = "15019888652";
                 String content = edtComment.getText().toString();
                 CommentData data = new CommentData();

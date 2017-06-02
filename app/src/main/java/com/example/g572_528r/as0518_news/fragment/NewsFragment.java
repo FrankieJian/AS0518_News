@@ -117,7 +117,7 @@ public class NewsFragment extends Fragment {
 //        txtContent = (TextView) view.findViewById(R.id.txt_content);
 //        txtContent.setText(text);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.news_ListView);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.news_listView);
         mNewsAdapter = new NewsAdapter(mNewsList);
         mRecyclerView.setAdapter(mNewsAdapter);
 
